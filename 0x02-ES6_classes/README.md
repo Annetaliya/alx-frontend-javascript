@@ -1,0 +1,1 @@
+#Solutions to Javascript classes tasks
