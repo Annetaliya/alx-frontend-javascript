@@ -23,18 +23,6 @@ const teacher3: Teacher = {
   }
 
 
-  const director: Directors = {
-    firstName: 'Leah',
-    lastName: 'wakala',
-    fullTimeEmployee: true,
-    location: 'Kigali',
-    contract: false,
-    numberOfReports: 6
-
-  };
-  console.log(director.firstName);
-  console.log(director.lastName);
-  console.log(director.numberOfReports);
 
   //function for printing teacher interface
 
@@ -48,3 +36,27 @@ const teacher3: Teacher = {
   };
 
   console.log(printTeacher('John', 'Doe'));
+
+
+ interface Student {
+  firstName: string;
+  lastName: string;
+
+ }
+
+ class StudentClass implements Student {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework(): string {
+    return 'currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+
+ }
+
+ const student = new StudentClass('john', 'Doe');
+ console.log(student.workOnHomework());
+ console.log(student.displayName());
